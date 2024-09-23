@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    
+--DesaturatedRed: hsl(0, 36%, 70%);
+--SoftRed: hsl(0, 93%, 68%);
+--DarkGrayishRed: hsl(0, 6%, 24%);
+--Linear135deg:from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+--Linear135deg:from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+body{
+    font-family: "Josefin Sans", sans-serif;
+}
+
+header{
+    background:url(images/bg-pattern-desktop.svg) center center/cover no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+header .container .apparel .apparel_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+header .container .apparel .apparel_content .apparel_info{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin: 0 140px 20px;
+}
+header .container .apparel .logo{
+    position: absolute;
+    top: 30px;
+    left: 140px;
+    display: block;
+}
+
+header .container .apparel .apparel_content .apparel_info .info h1{
+    font-family: inherit;
+    font-size: 60px;
+    font-weight: 300;
+    color: var(--DarkGrayishRed);
+    margin: 100px 0;    
+}
+header .container .apparel .apparel_content .apparel_info .info h1 span{
+    display: inline-block;
+    color: var(--DesaturatedRed);
+}
+header .container .apparel .apparel_content .apparel_info .info p{
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 400;
+    color: var(--DesaturatedRed);
+    position: relative;
+    bottom: 80px;
+}
+header .container .apparel .apparel_content .apparel_info .input{
+    position: relative;
+}
+header .container .apparel .apparel_content .apparel_info .input  .error{
+    position: absolute;
+    top:10px;
+    right: 135px;
+    opacity: 0;
+    transition: all 0.6s;
+}
+header .container .apparel .apparel_content .apparel_info .input .error.active{
+    opacity: 1;
+}
+header  .container .apparel .apparel_content .apparel_info .input input{
+    padding: 15px 30px;
+    width: 350px;
+    background-color: transparent;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    color: var(--DarkGrayishRed);
+    border: 1px solid rgb(226, 223, 223);
+}
+header  .container .apparel .apparel_content .apparel_info .input  button{
+    position: absolute;
+    top: 0;
+    right: 50px;
+    padding: 13px 30px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    transition: all 1s;
+}
+header .container .apparel .apparel_content .apparel_info .input button:hover{
+  opacity: 0.8;
+}
+header .container .apparel .apparel_content .apparel_info .input span{
+    display: block;
+    color: var(--SoftRed);
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 400;
+    margin: 15px 0 0 30px;
+}
+
+header .container .apparel .apparel_content .apparel_img picture img{
+    height: 638px;
+    width: 650px;
+    margin-top:0px;
+}
+@media(max-width:1024px){
+    header .container .apparel .logo {
+        left: 12px;
+      }
+      header .container .apparel .apparel_content .apparel_info .input button {
+        right: -45px;
+      }
+      header .container .apparel .apparel_content .apparel_info .input .error {
+        right: 30px;
+      }
+}
+@media(max-width:768px){
+    header .container .apparel .apparel_content .apparel_info {
+        margin: 0 -7px 0px;
+        padding-left: 16px;
+      }
+      header .container .apparel .apparel_content .apparel_img picture img {
+        height: 570px;
+        width: 410px;
+      }
+      header .container .apparel .logo {
+        left: 12px;
+        top: 30px;
+      }
+      header .container .apparel .apparel_content .apparel_info .input input {
+        width: 286px;
+      }
+      header .container .apparel .apparel_content .apparel_info .input button {
+        right: 29px;
+      }
+      header .container .apparel .apparel_content .apparel_info .input .error {
+        right: 111px;
+      }
+      
+}
+@media(max-width:480px){
+    header .container .apparel .apparel_content {
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+      }
+      header .container .apparel .apparel_content .apparel_img picture img {
+        height: 570px;
+        width: 480px;
+        margin-top: 100px;
+      }
+      header .container .apparel .logo {
+        left: 39px;
+      }
+      header .container .apparel .apparel_content .apparel_info .info{
+        text-align: center;
+      }
+      header .container .apparel .apparel_content .apparel_info .input input {
+        width: 360px;
+      }
+      header .container .apparel .apparel_content .apparel_info .input button {
+        right: 69px;
+      }
+      header .container .apparel .apparel_content .apparel_info .input .error {
+        right: 163px;
+      }
+}
+@media(max-width:375px){
+    header .container .apparel .logo {
+        top: 110px;
+      }
+      header .container .apparel .apparel_content .apparel_img picture img {
+        height: 500px;
+        width: 375px;
+        margin-top: 172px;
+      }
+      header .container .apparel .apparel_content .apparel_info .info p {
+        width: 344px;
+      }
+      header .container .apparel .apparel_content .apparel_info .input input {
+        width: 284px;
+      }
+      header .container .apparel .apparel_content .apparel_info .input button {
+        right: 22px;
+      }
+      header .container .apparel .apparel_content .apparel_info .input .error {
+        right: 104px;
+      }
+}
+@media(max-width:320px){
+    header .container .apparel .logo {
+        top: 50px;
+      }
+      header .container .apparel .apparel_content .apparel_img picture img {
+        height: 369px;
+        width: 320px;
+        margin-top: 130px;
+      }
+      header .container .apparel .apparel_content .apparel_info .info p {
+        width: 300px;
+      }
+
+}
+@media(max-width:240px){
+    header .container .apparel .apparel_content .apparel_img picture img {
+        height: 288px;
+        width: 240px;
+      }
+      header .container .apparel .apparel_content .apparel_info .info p {
+        width: 230px;
+        margin-left: 16px;
+      }
+      header .container .apparel .apparel_content .apparel_info .input input {
+        width: 200px;
+      }
+      header .container .apparel .apparel_content .apparel_info .input button {
+        right: 10px;
+      }
+      header .container .apparel .apparel_content .apparel_info .input .error {
+        right: 82px;
+      }
+      header .container .apparel .apparel_content .apparel_info .info p {
+        width: 230px;
+        margin-left: -14px;
+      }
+}
